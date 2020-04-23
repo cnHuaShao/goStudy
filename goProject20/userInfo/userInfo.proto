@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package userinfo;
+
+option go_package = ".;userinfo";
+
+//定义请求方法
+service User{
+  rpc GetUserInfo(userInfoRequest) returns (messageResponse){}
+}
+
+//请求参数
+message userInfoRequest{
+  string userid = 1;  //用户唯一编号id
+}
+
+message messageResponse{
+  string code = 1;
+  string msg = 2;
+  UserInfo data = 3;
+}
+
+//响应参数
+message UserInfo{
+  string username = 1;
+  int32 userage =2;
+  string userid =3;
+}

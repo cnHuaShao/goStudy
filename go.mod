@@ -9,4 +9,4 @@ require (
 	google.golang.org/protobuf v1.21.0
 )
 
-replace goStudy => D:\goProjectModules\goStudy
+replace goStudy => /home/zhangyc/go/src/goStudy
